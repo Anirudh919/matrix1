@@ -1,80 +1,67 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-void addmatrix(int a[][])
-{
-    int sum, m, n, i, j;
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {    jlihjlkinkl
-            sum = a[i][j] + (++a[i][j]);
-        }
-    }
-    for (i = 0; i < m; i++)
-    {
-        for (j = 0; j < n; j++)
-        {
-            printf("Addition of matrix%d:\n", sum);
-        }
-    }
-}
-void subtractmatrix()
-{
-}
-void multiplicationmatrix()
-{
-}
-
+#include<stdio.h>
+void call() ;
 int main()
 {
-    int n, i, j, b, a[10][10], m, c, choice, d;
-    printf("Enter the how many number of matrix insert:");
-    scanf("%d", &c);
-    for (b = 0; b < c; b++)
-    {
-        printf("Enter the number of column & row of matrix:");
-        scanf("%d%d", &m, &n);
-        printf("Enter the matrix %d:", b + 1);
-        for (i = 0; i < m; i++)
-        {
-            for (j = 0; j < n; j++)
-            {
-                scanf("%d", &a[i][j]);
-            }
-        }
-        printf("Matrix %d:\n", b + 1);
-        for (i = 0; i < m; i++)
-        {
-            for (j = 0; j < n; j++)
-            {
-                printf("%d\t", a[i][j]);
-            }
-            printf("\n");
-        }
-    }
-    do
-    {
-        printf("\n1. Addition of matrix\n2. Subtraction of matrix\n3. Multiplication of matrix\n4. Exit");
-        scanf("%d", &choice);
-        switch (choice)
-        {
-        case 1:
-            addmatrix(a[i][j]);
-            break;
-        case 2:
-            subtractmatrix();
-            break;
-        case 3:
-            multiplicationmatrix();
-            break;
-        case 4:
-            exit(0);
-            break;
+ int a,b,d,i,q,j;
+ printf("enter the number of matrix :\n");
+ scanf("%d",&a);
 
-        default:
-            printf("Enter the valid choice:");
-            break;
-        }
-    } while (d == 'y');
+ printf("enter the row & column number : \n");
+	
+ scanf("%d%d",&b,&d);
+
+ int array[b][d],sum[100][100];
+ printf("there are [%d] rows and [%d] column ,you enter \n",b,d); 
+ for(q=0;q<a;q++)
+	
+ {
+ 
+  printf("\nmatrix number [%d]\n",q);
+ for(i=0;i<b;i++)
+ {
+  for(j=0;j<d;j++)
+  {
+   printf("enter the number [%d][%d]",i,j);
+   scanf("%d",&array[i][j]);
+  
+  }
+ }
+ } //return array,b,d;
+ call(array,b,d
+ );
+  }
+  
+  
+void call(int array[10][10],int b,int d)  
+  { int a,i,q,j;
+int sum[100][100];
+printf("values  b %d d %d",b,d);
+ for(i=0;i<b;i++)
+ {
+  for(j=0;j<d;j++)
+  {  
+   sum[i][j] = sum [i][j]+ array[i][j];
+        // printf("%d ", &sum[i][j]);
+  }
+ }
+
+
+ // printing the result
+  printf("\nSum of two matrices: \n");
+  
+
+  
+ 
+  for(i=0;i<b;i++)
+ {
+  for(j=0;j<d;j++)
+  {
+      printf("%d ", sum[i][j]);
+      if (j == d - 1) 
+   {
+        printf("\n\n");
+      }
+      
+    }
+}
 }
