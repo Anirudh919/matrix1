@@ -1,5 +1,4 @@
 #include<stdio.h>
-void call() ;
 int main()
 {
  int a,b,d,i,q,j;
@@ -15,7 +14,6 @@ int main()
  for(q=0;q<a;q++)
 	
  {
- 
   printf("\nmatrix number [%d]\n",q);
  for(i=0;i<b;i++)
  {
@@ -23,29 +21,21 @@ int main()
   {
    printf("enter the number [%d][%d]",i,j);
    scanf("%d",&array[i][j]);
-  
+   
   }
  }
- } //return array,b,d;
- call(array,b,d
- );
-  }
-  
-  
-void call(int array[10][10],int b,int d)  
-  { int a,i,q,j;
-int sum[100][100];
-printf("values  b %d d %d",b,d);
+   
  for(i=0;i<b;i++)
  {
   for(j=0;j<d;j++)
-  {  
+  {
+  
    sum[i][j] = sum [i][j]+ array[i][j];
-        // printf("%d ", &sum[i][j]);
+         // printf("%d ", &sum[i][j]);
   }
  }
 
-
+}
  // printing the result
   printf("\nSum of two matrices: \n");
   
@@ -64,4 +54,5 @@ printf("values  b %d d %d",b,d);
       
     }
 }
+
 }
