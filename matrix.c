@@ -7,7 +7,7 @@ void addmatrix(int a[][])
     for (i = 0; i < m; i++)
     {
         for (j = 0; j < n; j++)
-        {
+        {    jlihjlkinkl
             sum = a[i][j] + (++a[i][j]);
         }
     }
